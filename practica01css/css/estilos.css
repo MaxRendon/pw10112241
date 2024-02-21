@@ -1,0 +1,12 @@
+body{
+    border: 1px slif red;
+    font-size: 16px; /*1em */
+    margin: 0px auto;
+    max-width: 1024px;
+}
+header{
+    background: #D1E3EE;
+}
+#logo{
+    margin: -150px 0 px 0px 0p;
+}
