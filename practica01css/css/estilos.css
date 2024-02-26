@@ -36,3 +36,35 @@ header nav ul li{
 #logo{
     margin: -150px 0px 0px 0px;
 }
+#seccion01{
+    margin-top: 15px;
+}
+#seccion01 article{
+    text-align: center;
+}
+#seccion01 article img{
+    width: 98%;
+    border: 5px solid rgba(150,150,150,0.5);
+}
+#seccion02 article{
+    width: 32.8%;
+    vertical-align: top;
+    display: inline-block;
+}
+#seccion02 article input[type="submit"]{
+    color: blue;
+    background: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-left: 35%;
+}
+.nito{
+    font-weight: bold;
+}
+.otraSeccion{
+    font-size: 2.5em;
+}
+.unaSeccion{
+    font-size: 4.5em;
+}
+
