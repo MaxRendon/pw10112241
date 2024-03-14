@@ -1,0 +1,29 @@
+html{
+    --color-verde: #849c3c;
+    --color-negro: #353535;
+    --color-gris: lightgray;
+    --fondo-negro: #2C2C2C;
+    --color-linea: #949494;
+}
+body{
+    font-size: 16px;
+    margin: 0px auto;
+    max-width: 1024px;
+}
+footer article{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px;
+    vertical-align: top;
+    width: 15%;
+}
+header ul li{
+    display: inline-block;
+    margin-left: -67px;
+    padding: 8px 14px;
+    text-align: center;
+    width: 10.0%;
+}
+header img{
+    float: right;
+}
