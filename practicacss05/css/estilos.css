@@ -1,5 +1,43 @@
+#barras #ruedita{
+    width: 10%;
+}
 body{
     font-size: 16px;
     margin: 0px auto;
     max-width: 1024px;
+}
+header{
+    align-items: center;
+    width: 100%;
+}
+header img{
+    
+}
+#minimenu{
+    float: right;
+}
+#minimenu img{
+    
+}
+#izquierda{
+    border: 1px solid red;
+    width: 25%;
+}
+#izquierda img{
+    width: 100%;
+}
+#lista{
+    background: rgb(28, 74, 115);
+    color: white;
+}
+#lista ul{
+    margin-top: 0%;
+}
+#lista ul li{
+    margin: 2%;
+}
+#panel{
+    background: rgb(28, 74, 115);
+    color: white;
+    width: 100%;
 }
