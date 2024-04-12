@@ -1,0 +1,83 @@
+body{
+    font-size: 16px;  /* 1em */
+    margin: 0px auto;
+    max-width: 1078px;
+    min-width: 1078px;
+    /* border: 1px solid red; */
+}
+#desk  {
+    border-radius: 10px;
+    border: 5px solid white;
+    width: 60%;
+    vertical-align: middle;
+    margin-bottom: -90px;
+}
+#get {
+    background: #1d4ed9;
+    border-radius: 25px;
+    font-weight: bold;
+    size: 40%;
+}
+#live {
+    background: #384152;
+    border-radius: 25px;
+    font-weight: bold;
+}
+header{
+    /* border: 1px solid red; */
+    background: #1f2938;
+}
+#centrar {
+    margin-top: 15px;
+    margin-left: 55px;
+}
+header nav{
+    /* border: 1px solid red; */
+    float: right;
+    margin-top: -15px;
+    margin-right: 35px;
+}
+header nav ul li{
+    display: inline-block;
+    margin-left: 8px;
+}
+header nav ul li img{
+    width: 20px;
+}
+header img{
+    width: 20px;
+    vertical-align: middle;
+}
+#section01 {
+    background: #1f2938;
+    text-align: center;
+}
+#section01 article{
+    padding-top: 130px;
+}
+#section02 {
+    margin-top: 170px;
+    text-align: center;
+}
+#section02 article{
+    margin-top: 35px;
+    display: inline-block;
+    width: 32%;
+}
+#signin {
+    vertical-align: middle;
+}
+.letrablanca {
+    color: white;
+}
+.letrablancagrande {
+    color: white;
+    font-size: 1.7em;
+}
+.letranegragrande {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+.negritas{
+    font-weight: bold;
+}
