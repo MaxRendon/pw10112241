@@ -3,6 +3,9 @@
         <div class="card">
             <div class="card-header">
                 <h4>Agregar Cliente</h4>
+                <div v-if="mensaje == 1" class="alert alert-warning" role="alert">
+                    Datos guardados con exito
+                </div>
             </div>
             <div class="card-body">
                 <div class="mb-3">
@@ -37,17 +40,20 @@
                     CP
                     <input type="text" class="form-control" v-model="model.cliente.cp">
                 </div>
-                <button class="btn btn-primary">Guardar</button>
+                <button class="btn btn-primary" @click="guardarCliente()">Guardar</button>
             </div>
         </div>
     </div>
 </template>
 
 <script>
+import axios from 'axios';
+
     export default{
         name: 'ClientesCreate',
         data(){
             return{
+                mensaje: 0,
                 model:{
                     cliente: {
                         id: '',
@@ -59,7 +65,33 @@
                         curp: '',
                         cp: ''
                     }
+                    
                 }
+            }
+            //Para que salga el mensaje de exit0
+            this.mensaje = 1;
+        },
+        methods:{
+            guardarCliente() {
+                axios.post('http://localhost:3000/api/clientes', this.model.cliente)
+                .then(res => {
+                    //Si insertamos un registro
+                    if(res.data.affectedRows == 1){ 
+                        //Limpiamos los cuadros de texto
+                        this.model.cliente = {
+                        id: '',
+                        nombre: '',
+                        apellido: '',
+                        direccion: '',
+                        telefono: '',
+                        rfc: '',
+                        curp: '',
+                        cp: ''
+                    }
+                    }
+                    //Para que salga el mensaje de exit0
+                    this.mensaje = 1;
+                })
             }
         }
     }
