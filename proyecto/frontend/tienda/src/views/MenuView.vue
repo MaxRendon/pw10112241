@@ -13,8 +13,9 @@
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <RouterLink class="navbar-brand" to="/clientes">Clientes</RouterLink>
-          <RouterLink class="navbar-brand" to="/proveedores">Proveedores</RouterLink>
-          <RouterLink class="navbar-brand" to="/ventas">Ventas</RouterLink>
+          <!-- <RouterLink class="navbar-brand" to="/proveedores">Proveedores</RouterLink> -->
+          <!-- <RouterLink class="navbar-brand" to="/ventas">Ventas</RouterLink> -->
+          <RouterLink class="navbar-brand" to="/clientes/registro">Registro</RouterLink>
         </li>
         
       </ul>

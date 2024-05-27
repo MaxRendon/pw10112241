@@ -32,6 +32,10 @@
                             <td>{{ cliente.curp }}</td>
                             <td>{{ cliente.cp }}</td>
                             <td>
+                                <RouterLink :to="{path: '/clientes/'+clientes.id+'/edit'}" class="btn btn-succes">
+                                    Editar
+                                </RouterLink>
+                                &nbsp;
                                 <button class="btn btn-primary"> Editar</button>
                                 <button class="btn btn-danger" @click="deleteCliente(cliente.id)"> Borrar</button>
                             </td>
@@ -50,31 +54,33 @@
 
 <script>
     import axios from 'axios';
+import { RouterLink } from 'vue-router';
 
     export default{
-        name: "ClientesView",
-        data(){
-            return{
-                clientes: [],
-            }
+    name: "ClientesView",
+    data() {
+        return {
+            clientes: [],
+        };
+    },
+    mounted() {
+        this.getClientes();
+    },
+    methods: {
+        getClientes() {
+            axios.get('http://localhost:3000/api/clientes').then(res => {
+                console.log(res);
+                this.clientes = res.data;
+            });
         },
-        mounted(){ //cuando se carga la pagina
-            this.getClientes();
-        },
-        methods: {
-            getClientes(){
-                axios.get('http://localhost:3000/api/clientes').then(res=>{
-                    console.log(res)
-                    this.clientes = res.data;
-                });
-            },
-            deleteCliente(idClienteBorrar){
-                axios.delete('http://localhost:3000/api/clientes/'+idClienteBorrar).then(res=>{
-                    if(res.data.affectedRows > 0){
-                        this.getClientes(); //Para que se recarguen los datos.
-                    }
-                });
-            }
+        deleteCliente(idClienteBorrar) {
+            axios.delete('http://localhost:3000/api/clientes/' + idClienteBorrar).then(res => {
+                if (res.data.affectedRows > 0) {
+                    this.getClientes(); //Para que se recarguen los datos.
+                }
+            });
         }
-    }
+    },
+    components: { RouterLink }
+}
 </script>
