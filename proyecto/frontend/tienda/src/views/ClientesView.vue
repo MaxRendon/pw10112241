@@ -32,11 +32,10 @@
                             <td>{{ cliente.curp }}</td>
                             <td>{{ cliente.cp }}</td>
                             <td>
-                                <RouterLink :to="{path: '/clientes/'+clientes.id+'/edit'}" class="btn btn-succes">
+                                <button class="btn btn-primary"><RouterLink :to="{path: '/clientes/'+clientes.id+'/edit'}" class="btn btn-succes">
                                     Editar
-                                </RouterLink>
+                                </RouterLink> </button>
                                 &nbsp;
-                                <button class="btn btn-primary"> Editar</button>
                                 <button class="btn btn-danger" @click="deleteCliente(cliente.id)"> Borrar</button>
                             </td>
                         </tr>
